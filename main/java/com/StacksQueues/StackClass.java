@@ -6,11 +6,16 @@ public class StackClass<Key> {
 	public StackClass() {
 		linkedList=new LinkedListClass<>();
 		stackSize=0;
+=======
+
+	public StackClass() {
+		linkedList=new LinkedListClass<>();
 	}
 	
 	public void push(LinkedListNode<Key> newNode) {
 		linkedList.add(newNode);
 		stackSize++;
+=======
 	}
 	
 	public LinkedListNode<Key> peek() {
@@ -33,6 +38,7 @@ public class StackClass<Key> {
 		return stackSize;
 	}
 	
+=======
 	public void showStack() {
 		System.out.println("Stack -> ");
 		System.out.println();
