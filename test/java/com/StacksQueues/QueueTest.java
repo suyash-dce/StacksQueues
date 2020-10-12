@@ -1,5 +1,10 @@
 import static org.junit.Assert.*;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+=======
 import org.junit.Test;
 
 public class QueueTest {
@@ -27,6 +32,53 @@ public class QueueTest {
 		queue.showQueue();
 	}
 
+	//Checking for size of queue
+	@Test
+	public void t1CheckQueueSizeIsThree() {
+		assertEquals(3, queue.queueSize);
+	}
+
+	//Checking for dequeue of head
+	@Test
+	public void t2WhenDequeueShouldReturnHeadElement() {
+		assertEquals(Node1, queue.dequeue());
+	}
+
+	//Checking for size of queue
+	@Test
+	public void t3CheckQueueSizeIsTwo() {
+		assertEquals(2, queue.queueSize);
+	}
+
+	//Checking for dequeue of second element
+	@Test
+	public void t4WhenDequeueShouldReturnSecondElement() {
+		assertEquals(Node2, queue.dequeue());
+	}
+
+	//Checking for size of queue
+	@Test
+	public void t5CheckQueueSizeIsOne() {
+		assertEquals(1, queue.queueSize);
+	}
+
+	//Checking for dequeue of tail
+	@Test
+	public void t6WhenDequeueShouldReturnHeadElement() {
+		assertEquals(Node3, queue.dequeue());
+	}
+	
+	//Checking for size of queue
+	@Test
+	public void t7CheckQueueSizeIsZero() {
+		assertEquals(0, queue.queueSize);
+	}
+
+	//Checking for dequeue of tail
+	@Test
+	public void t8WhenDequeueShouldReturnError() {
+		assertEquals(new LinkedListNode<Integer>(null), queue.dequeue());
+=======
 	//Checking for linking of nodes
 	@Test
 	public void WhenNode1LinkedToNode2ShouldReturnTrue() {
