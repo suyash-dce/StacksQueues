@@ -4,6 +4,9 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+=======
+import org.junit.Test;
+
 public class QueueTest {
 
 	static LinkedListClass<Integer> LinkedList;
@@ -75,5 +78,15 @@ public class QueueTest {
 	@Test
 	public void t8WhenDequeueShouldReturnError() {
 		assertEquals(new LinkedListNode<Integer>(null), queue.dequeue());
+=======
+	//Checking for linking of nodes
+	@Test
+	public void WhenNode1LinkedToNode2ShouldReturnTrue() {
+		assertTrue((Node1.getNextNode()).equals(Node2));
+	}
+
+	@Test
+	public void WhenNode2LinkedToNode3ShouldReturnTrue() {
+		assertTrue((Node2.getNextNode()).equals(Node3));
 	}
 }
