@@ -1,4 +1,4 @@
-ublic class LinkedListClass<Key> {
+public class LinkedListClass<Key> {
 
 	public LinkedListFunction<Key> headNode;
 	public LinkedListFunction<Key> tailNode;
